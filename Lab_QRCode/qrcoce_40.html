@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testing QR Code</title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+</head>
+
+<body>
+    <!-- 不一定要用div span也可以 -->
+    <!-- 可以直接在標籤定位位置 -->
+    <div class="ui-grid-b">
+        <div class="ui-block-a">A</div>
+        <div id="qrcode" class="ui-block-b">B</div>
+    </div>
+    <script>
+
+        var target = "https://zh.wikipedia.org/wiki/維基";
+        console.log(encodeURI(target));
+        // decodeURI 解碼
+
+        var options = {
+            text: encodeURI(target),
+            width: 100,
+            height: 100
+        };
+
+        $('#qrcode').qrcode(options);
+
+    </script>
+
+</body>
+
+</html>
