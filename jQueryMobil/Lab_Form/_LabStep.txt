@@ -107,8 +107,8 @@ jQueryMobile WebForm Controls 練習
 			<div data-role="fieldcontain">
 				<label for="sltOnOff">Switch (select):</label>
 				<select name="sltOnOff" id="sltOnOff" data-role="slider">
-					<option value="off">Off</option>
-					<option value="on">On</option>
+					<option value="off">Off</option> //不要的-暗色
+					<option value="on">On</option> //要的-亮色
 				</select>
 			</div>
 
@@ -138,6 +138,8 @@ jQueryMobile WebForm Controls 練習
 
 
 8.	一組圓鈕選項，適合於單選情境:
+
+/////***老師建議 三個以上再用 data-type="horizontal"
 			<fieldset data-role="controlgroup">
 					<legend>Choose a pet:</legend>
 			     	<input type="radio" name="rdoPet" id="rdoPet0" value="0" checked="checked" />
@@ -188,6 +190,7 @@ jQueryMobile WebForm Controls 練習
 			<fieldset data-role="controlgroup">
 				<label for="sltCity">City:</label>
 				<select name="sltCity" id="sltCity" data-native-menu="false">
+	//****data-placeholder="true"不可以再選擇
 				   <option value="-1" data-placeholder="true">請選擇:</option>
 				   <option value="0">台北</option>
 				   <option value="1">台中</option>
@@ -197,7 +200,7 @@ jQueryMobile WebForm Controls 練習
 			</fieldset>
 
 9-4	在 select 的  OpenTag 加上 multiple 屬性，讓使用者可複選各選項
-9-5	select 的 name 屬性屬性值加上一對中括號
+9-5***select 的 name 屬性屬性值加上一對中括號(*****有multiple 屬性)
 
 			<fieldset data-role="controlgroup">
 				<label for="sltCity[]">City:</label>
