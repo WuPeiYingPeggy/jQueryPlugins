@@ -208,7 +208,10 @@
         },
         methods: {
             reverseMessage: function () {
-                this.message = this.message.split('').reverse().join('');
+                        
+                this.message = 
+                //                     反轉陣列,再把字串串接
+                this.message.split('').reverse().join('');
             }
         }
     });
@@ -226,6 +229,7 @@
 6.1 修改 <div id="app1"> 的內容: (新加入 <input v-model="message"><br>)
 
     <div id="app1">
+    //input 綁定預設message 用v-model,改變輸入內容,text也跟著變
         <input v-model="message"><br>
         {{ message }}<br>
         <button v-on:click="reverseMessage">Reverse Message</button>

@@ -16,10 +16,10 @@
                     fail(-100);
                 }
             }
-            
-            longTimeWork(function (e) {
+            //fun 當參數 傳給10 行fun
+            longTimeWork(function (e) { //fun1
                 debug.innerHTML += "success: " + e + "<br>";
-            }, function (e) {
+            }, function (e) { //fun2
                 debug.innerHTML += "fail: " + e + "<br>";
             })
             

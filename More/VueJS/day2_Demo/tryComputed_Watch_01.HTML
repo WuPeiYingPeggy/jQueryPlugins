@@ -8,7 +8,8 @@
 
 </head>
 <body>
-
+computed 比 watch 較簡易 <br>
+<strong>不知道要用什麼就用computed</strong> 
 <div id="lab">
     First Name: <input type="text" v-model='firstName' > <br>
     Last Name: <input type="text" v-model='lastName' > <hr>
@@ -22,8 +23,10 @@
             firstName: "",
             lastName: ""
         },
+
         computed: {
-            fullName() {
+            // firstName: function ()
+            fullName(){
                 return this.firstName + " " + this.lastName;
             }
         }
