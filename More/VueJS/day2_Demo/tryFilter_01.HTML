@@ -21,6 +21,7 @@
         },
         filters: {
             dateFormatFilter: function (value) {
+                //引用format 外部資源 (src="date.format.js")
                 return value.format("yyyy-mm-dd HH:MM:ss");
             }
         }

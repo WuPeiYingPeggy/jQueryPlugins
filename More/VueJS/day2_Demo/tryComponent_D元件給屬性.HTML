@@ -8,19 +8,27 @@
 
 </head>
 <body>
+    <!-- vue元件 設定屬性 -->
     <div id="lab">
         <count-button v-bind:init-count="20"></count-button>
         <br>
         <count-button v-bind:init-count="30"></count-button>
+        <br>
+        <count-button ></count-button>
     </div>
 
 <script>
 
     Vue.component('count-button', {
-        props: ['initCount'],
-        data: function () {
+        // props: ['initCount','otherData'],
+        props:{
+            initCount:0, //不能給值(10或43)
+            otherData:0
+        },
+        data: function () {//回傳給Vue裡面的data
             return {
-                count: this.initCount
+                //***制訂屬性          如果html沒有給值(如第三個按鈕)
+                count: this.initCount || 1
             }
         },
         template: `

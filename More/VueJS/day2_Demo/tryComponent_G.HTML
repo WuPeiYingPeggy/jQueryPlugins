@@ -8,6 +8,8 @@
 
 </head>
 <body>
+    <!-- 元件透過"事件"跟外界溝通 
+         外部才可以改資料-->
     <div id="lab">
         總次數: {{totalCount}} <br>
         <count-button v-bind:init-count="20" v-on:cclick="totalCount++"></count-button>
@@ -23,8 +25,8 @@
             return {
                 count: this.initCount
             }
-        },
-        template: `
+        },                 //emit 觸發事件(對外)//呼叫事件處理程式
+        template: `                      
             <button v-on:click="doClick(); $emit('cclick')"> 
                 點按次數: {{count}} 
             </button>
