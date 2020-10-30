@@ -12,7 +12,7 @@
 <body>
     <span id="lab">
         <div>{{message}}</div>
-        <count-button v-bind:init-count="500" v-on:cclick="totalCount++"></count-button>
+        <count-button v-bind:init-count="20" v-on:click="totals();"></count-button>
         <count-button ></count-button>
         <h1>{{totalCount}}</h1>
     </span>
@@ -28,12 +28,12 @@ Vue.component('count-button', {
             }
         },
         template: `
-        <button v-on:click="doClick; $emit('cclick')"> 點按次數: {{count}} </button>
+        <button v-on:click="doClick"> 點按次數: {{count}} </button>
         `,
         methods: {
             doClick: function () {
                 this.count++;
-                
+                this.$emit('click');
             }
         }
     })
@@ -42,7 +42,13 @@ Vue.component('count-button', {
             data: {
                 message: "ok",
                 totalCount:20
+            },
+            methods: {
+            totals: function () {
+                this.totalCount++;
+                
             }
+        }
 
         })
 
